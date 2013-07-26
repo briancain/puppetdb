@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PuppetDB: Query Dashboard</title>
+    <script>
+      function myFunction(){
+        var query = document.getElementById('queryTxt');
+        var curl = "curl -G -H \"Accept: application/json\" 'http://localhost:9000/v2/nodes' --data-urlencode 'query=";
+        var cmd = curl.concat(query.value);
+        var result = cmd.concat("\'");
+        alert(result);
+      }
+    </script>
+  <body>
+    <h1>PuppetDB: Query Dashboard</h1>
+    <p>Enter your query....</p>
+    <input type="text" name="queryTxt" id="queryTxt" value="Enter Query">
+    <input type="button" onclick="myFunction()" value="Get Query">
+  </body>
+</html>
