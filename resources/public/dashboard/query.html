@@ -8,7 +8,8 @@
         var curl = "curl -G -H \"Accept: application/json\" 'http://localhost:9000/v2/nodes' --data-urlencode 'query=";
         var cmd = curl.concat(query.value);
         var result = cmd.concat("\'");
-        alert(result);
+        // alert(result);
+        document.getElementById("demo").innerHTML=result;
       }
     </script>
   <body>
@@ -16,5 +17,6 @@
     <p>Enter your query....</p>
     <input type="text" name="queryTxt" id="queryTxt" value="Enter Query">
     <input type="button" onclick="myFunction()" value="Get Query">
+    <p id="demo"></p>
   </body>
 </html>
